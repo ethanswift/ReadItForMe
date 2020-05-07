@@ -9,11 +9,10 @@
 import UIKit
 import Vision
 
+@available(iOS 13.0, *)
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var imagePicker = UIImagePickerController()
-    
-    @IBOutlet weak var cameraButton: UIButton!
     
     var image: CIImage?
     
@@ -28,33 +27,35 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.editedImage] as! UIImage // ciImage?
+        let image = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+        let resultImageCI = CIImage(image: image)
+        if resultImageCI != nil {
+            self.analyzeImage(image: resultImageCI!)
+        }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
-    func analyzeImage (image: CGImage) -> String {
+    @available(iOS 13.0, *)
+    func analyzeImage (image: CIImage) -> String {
         var finalStr: String = ""
-        let imageHandler = VNImageRequestHandler(cgImage: image, options: [:])
-        let imageRequest = VNDetectTextRectanglesRequest { (request, error) in
-            let results = request.results as! [VNTextObservation]
-            
-        }
+        let imageHandler = VNImageRequestHandler(ciImage: image, orientation: .right, options: [:])
+            let imageRequest = VNRecognizeTextRequest { (request, error) in
+                if let resutls = request.results as? [VNRecognizedTextObservation] {
+                    for result in resutls {
+                        
+                    }
+                }
+            }
         do {
             try  imageHandler.perform([imageRequest])
         } catch {
             print(error.localizedDescription)
         }
-        
         return finalStr
-    }
-    
-    @IBAction func cameraPressed(_ sender: UIButton) {
-        imagePicker.takePicture()
-    }
-    
+    }    
     
     /*
     // MARK: - Navigation

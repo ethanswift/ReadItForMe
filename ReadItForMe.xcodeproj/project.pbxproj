@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0E5C5F92464B0D2007CEF9F /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5C5F82464B0D2007CEF9F /* ButtonViewController.swift */; };
+		C0E5C5FB2464B77F007CEF9F /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5C5FA2464B77F007CEF9F /* WordViewController.swift */; };
+		C0E5C5FD2464B79E007CEF9F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5C5FC2464B79E007CEF9F /* WebViewController.swift */; };
 		C0F845A9245AB32600780563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F845A8245AB32600780563 /* AppDelegate.swift */; };
 		C0F845AB245AB32600780563 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F845AA245AB32600780563 /* ViewController.swift */; };
 		C0F845AE245AB32600780563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F845AC245AB32600780563 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0E5C5F82464B0D2007CEF9F /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		C0E5C5FA2464B77F007CEF9F /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		C0E5C5FC2464B79E007CEF9F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C0F845A5245AB32600780563 /* ReadItForMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadItForMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F845A8245AB32600780563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F845AA245AB32600780563 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,9 @@
 				C0F845A8245AB32600780563 /* AppDelegate.swift */,
 				C0F845AA245AB32600780563 /* ViewController.swift */,
 				C0F845AC245AB32600780563 /* Main.storyboard */,
+				C0E5C5FC2464B79E007CEF9F /* WebViewController.swift */,
+				C0E5C5FA2464B77F007CEF9F /* WordViewController.swift */,
+				C0E5C5F82464B0D2007CEF9F /* ButtonViewController.swift */,
 				C0F845BE245ACD8A00780563 /* ImageViewController.swift */,
 				C0F845AF245AB32700780563 /* Assets.xcassets */,
 				C0F845B1245AB32700780563 /* LaunchScreen.storyboard */,
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E5C5F92464B0D2007CEF9F /* ButtonViewController.swift in Sources */,
+				C0E5C5FD2464B79E007CEF9F /* WebViewController.swift in Sources */,
 				C0F845AB245AB32600780563 /* ViewController.swift in Sources */,
+				C0E5C5FB2464B77F007CEF9F /* WordViewController.swift in Sources */,
 				C0F845BF245ACD8A00780563 /* ImageViewController.swift in Sources */,
 				C0F845A9245AB32600780563 /* AppDelegate.swift in Sources */,
 			);
